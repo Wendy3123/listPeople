@@ -1,12 +1,17 @@
 const people = require('./people.js')
 
 const listPeople = (arr) => {
-
     // YOUR CODE HERE
-    return "hello world"
-    
+    const newArray=arr.map((person)=>{
+        if(person.private === true){
+            return person.name +', '+ person.location
+        }
+        else{
+            return person.name +', '+ person.location + '('+person.phone+ ')'
+        }
+    })
+    return newArray
 }
-
 //////////////////////////////
 // please do not edit below :)
 //////////////////////////////
